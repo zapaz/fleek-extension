@@ -11,14 +11,13 @@ Install via this command:
 ```sh
 npx create-eth@latest -e zapaz/fleek-extension
 ```
-v
 Then run the following commands to initialize the new repo,
 ```sh
 cd <your new repo>
 ./init.sh
 ```
 
-Finally the classic Scaffold-eth-2 commands in 3 different terminals:
+And the classic Scaffold-eth-2 commands in 3 different terminals:
 ```sh
 yarn chain
 ```
@@ -29,18 +28,18 @@ yarn deploy
 yarn start
 ```
 
+## Deploy 🚀
 
-## Shortcuts 🌟
-
-To get access to ` yarn fleek:login` and ` yarn fleek:deploy` add these scripts:
-
-- in [root package.json](./package.json) :
-```json
-    "fleek": "yarn workspace @se-2/nextjs fleek",
+To deploy your SE-2 build to Fleek, run this command once:
+```sh
+yarn fleek:login
 ```
-- in [nextjs package.json](./package.json) :
-```json
-    "fleek": "fleek",
-    "fleek:login": "fleek login",
-    "fleek:deploy": "NEXT_PUBLIC_PROD=true next build && fleek sites deploy",
+
+and this one on each deploy:
+```sh
+yarn fleek:deploy
 ```
+
+
+Full documentation available in [here](./extension/packages/nextjs/README.md)
+
